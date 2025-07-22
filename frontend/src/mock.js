@@ -6,32 +6,44 @@ export const mockWebsites = [
     url: 'https://www.google.com',
     name: 'Google',
     isActive: true,
+    autoStart: true,
     addedAt: new Date('2024-01-15'),
-    lastReloaded: new Date('2024-01-20T10:30:00')
+    lastReloaded: new Date('2024-01-20T10:30:00'),
+    reloadCount: 245,
+    customInterval: null // uses global settings
   },
   {
     id: '2', 
     url: 'https://www.github.com',
     name: 'GitHub',
     isActive: true,
+    autoStart: false,
     addedAt: new Date('2024-01-16'),
-    lastReloaded: new Date('2024-01-20T10:25:00')
+    lastReloaded: new Date('2024-01-20T10:25:00'),
+    reloadCount: 189,
+    customInterval: 120 // custom 2 minutes
   },
   {
     id: '3',
     url: 'https://www.stackoverflow.com',
     name: 'Stack Overflow',
     isActive: false,
+    autoStart: false,
     addedAt: new Date('2024-01-17'),
-    lastReloaded: new Date('2024-01-20T09:45:00')
+    lastReloaded: new Date('2024-01-20T09:45:00'),
+    reloadCount: 67,
+    customInterval: null
   },
   {
     id: '4',
     url: 'https://www.reddit.com',
     name: 'Reddit',
     isActive: true,
+    autoStart: true,
     addedAt: new Date('2024-01-18'),
-    lastReloaded: new Date('2024-01-20T10:15:00')
+    lastReloaded: new Date('2024-01-20T10:15:00'),
+    reloadCount: 312,
+    customInterval: 300 // custom 5 minutes
   }
 ];
 
