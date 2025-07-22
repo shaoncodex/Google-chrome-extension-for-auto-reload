@@ -16,7 +16,7 @@ import {
 } from 'lucide-react';
 import { useToast } from '../hooks/use-toast';
 
-const WebsiteManager = ({ websites, setWebsites, mockApi }) => {
+const WebsiteManager = ({ websites, setWebsites, offlineApi }) => {
   const [newWebsiteUrl, setNewWebsiteUrl] = useState('');
   const [newWebsiteName, setNewWebsiteName] = useState('');
   const [isAddingWebsite, setIsAddingWebsite] = useState(false);
