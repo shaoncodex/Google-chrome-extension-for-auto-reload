@@ -169,7 +169,7 @@ const Dashboard = () => {
             <WebsiteManager 
               websites={websites} 
               setWebsites={setWebsites}
-              mockApi={mockApi}
+              offlineApi={offlineApi}
             />
           </TabsContent>
 
