@@ -40,12 +40,13 @@ const TimeSelector = ({
 
   // Update local state when value prop changes
   useEffect(() => {
-    if (value !== (hours * 3600) + (minutes * 60) + seconds) {
+    const currentTotal = (hours * 3600) + (minutes * 60) + seconds;
+    if (value !== currentTotal) {
       setHours(Math.floor(value / 3600));
       setMinutes(Math.floor((value % 3600) / 60));
       setSeconds(value % 60);
     }
-  }, [value]);
+  }, [value]); // Removed hours, minutes, seconds from deps to prevent loop
 
   const handlePresetClick = (presetValue) => {
     setHours(Math.floor(presetValue / 3600));
