@@ -38,12 +38,37 @@ export const mockWebsites = [
 export const mockSettings = {
   id: 'default',
   isExtensionActive: true,
-  reloadMode: 'random', // 'random' | 'custom' | 'sequential'
-  minInterval: 30, // seconds
-  maxInterval: 300, // seconds  
+  reloadMode: 'custom', // 'random' | 'custom' | 'sequential' | 'smart'
+  
+  // Time Settings
   customInterval: 60, // seconds
+  customMinutes: 1,
+  customSeconds: 0,
+  customHours: 0,
+  
+  // Random Mode Settings
+  minInterval: 30, // seconds
+  maxInterval: 300, // seconds
+  
+  // Quick Presets
+  quickPresets: [
+    { name: '30 seconds', seconds: 30 },
+    { name: '1 minute', seconds: 60 },
+    { name: '5 minutes', seconds: 300 },
+    { name: '10 minutes', seconds: 600 },
+    { name: '30 minutes', seconds: 1800 },
+    { name: '1 hour', seconds: 3600 }
+  ],
+  
+  // Advanced Options
   randomizeOrder: true,
+  autoStartEnabled: true,
   notifications: true,
+  notificationSound: false,
+  showBadgeCount: true,
+  pauseOnError: true,
+  retryOnError: 3,
+  
   lastSync: new Date('2024-01-20T10:35:00')
 };
 
