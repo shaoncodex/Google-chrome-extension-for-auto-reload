@@ -227,12 +227,28 @@ const WebsiteManager = ({ websites, setWebsites, mockApi }) => {
                         >
                           {website.isActive ? 'Active' : 'Inactive'}
                         </Badge>
+                        {website.autoStart && (
+                          <Badge className="bg-purple-500/20 text-purple-300 border-purple-500/30">
+                            <Play className="w-3 h-3 mr-1" />
+                            Auto-Start
+                          </Badge>
+                        )}
+                        {website.customInterval && (
+                          <Badge className="bg-blue-500/20 text-blue-300 border-blue-500/30">
+                            <Clock className="w-3 h-3 mr-1" />
+                            {website.customInterval}s
+                          </Badge>
+                        )}
                       </div>
                       <p className="text-sm text-slate-400 mb-1">{website.url}</p>
                       <div className="flex items-center gap-4 text-xs text-slate-500">
                         <span className="flex items-center gap-1">
                           <Clock className="w-3 h-3" />
                           Last reload: {formatLastReloaded(website.lastReloaded)}
+                        </span>
+                        <span className="flex items-center gap-1">
+                          <RefreshCw className="w-3 h-3" />
+                          {website.reloadCount || 0} reloads
                         </span>
                         <span>
                           Added: {new Date(website.addedAt).toLocaleDateString()}
