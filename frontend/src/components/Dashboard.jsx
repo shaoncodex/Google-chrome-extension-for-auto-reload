@@ -23,7 +23,7 @@ import {
 } from 'lucide-react';
 import { mockApi } from '../mock';
 import WebsiteManager from './WebsiteManager';
-import SettingsPanel from './SettingsPanel';
+import AdvancedSettingsPanel from './AdvancedSettingsPanel';
 import StatsPanel from './StatsPanel';
 
 const Dashboard = () => {
