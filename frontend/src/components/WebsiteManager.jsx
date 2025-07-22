@@ -75,7 +75,7 @@ const WebsiteManager = ({ websites, setWebsites, offlineApi }) => {
 
   const toggleWebsiteStatus = async (id, isActive) => {
     try {
-      const updatedWebsite = await mockApi.updateWebsite(id, { isActive });
+      const updatedWebsite = await offlineApi.updateWebsite(id, { isActive });
       setWebsites(prev => 
         prev.map(w => w.id === id ? updatedWebsite : w)
       );
