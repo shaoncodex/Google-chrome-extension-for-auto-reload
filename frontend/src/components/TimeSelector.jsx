@@ -33,8 +33,10 @@ const TimeSelector = ({
   // Update parent when time values change
   useEffect(() => {
     const totalSeconds = (hours * 3600) + (minutes * 60) + seconds;
-    onChange(totalSeconds);
-  }, [hours, minutes, seconds, onChange]);
+    if (totalSeconds !== value) {
+      onChange(totalSeconds);
+    }
+  }, [hours, minutes, seconds, onChange, value]);
 
   // Update local state when value prop changes
   useEffect(() => {
