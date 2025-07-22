@@ -33,7 +33,7 @@ const AdvancedSettingsPanel = ({ settings, setSettings, offlineApi }) => {
     setIsSaving(true);
     
     try {
-      const updatedSettings = await mockApi.updateSettings(localSettings);
+      const updatedSettings = await offlineApi.updateSettings(localSettings);
       setSettings(updatedSettings);
       
       toast({
