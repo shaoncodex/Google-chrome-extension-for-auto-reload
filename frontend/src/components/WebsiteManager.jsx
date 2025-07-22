@@ -11,7 +11,8 @@ import {
   ExternalLink, 
   Globe, 
   Clock,
-  RefreshCw
+  RefreshCw,
+  Play
 } from 'lucide-react';
 import { useToast } from '../hooks/use-toast';
 
