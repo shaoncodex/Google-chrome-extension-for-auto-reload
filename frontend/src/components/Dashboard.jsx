@@ -21,7 +21,7 @@ import {
   RefreshCw,
   Download
 } from 'lucide-react';
-import { mockApi } from '../mock';
+import { offlineApi } from '../services/offlineStorage';
 import WebsiteManager from './WebsiteManager';
 import AdvancedSettingsPanel from './AdvancedSettingsPanel';
 import StatsPanel from './StatsPanel';
