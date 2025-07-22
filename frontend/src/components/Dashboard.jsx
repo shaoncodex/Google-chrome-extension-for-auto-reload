@@ -174,7 +174,7 @@ const Dashboard = () => {
           </TabsContent>
 
           <TabsContent value="settings">
-            <SettingsPanel 
+            <AdvancedSettingsPanel 
               settings={settings} 
               setSettings={setSettings}
               mockApi={mockApi}
