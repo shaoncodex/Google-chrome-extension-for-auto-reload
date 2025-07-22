@@ -24,7 +24,7 @@ import {
 import { useToast } from '../hooks/use-toast';
 import TimeSelector from './TimeSelector';
 
-const AdvancedSettingsPanel = ({ settings, setSettings, mockApi }) => {
+const AdvancedSettingsPanel = ({ settings, setSettings, offlineApi }) => {
   const [localSettings, setLocalSettings] = useState(settings || {});
   const [isSaving, setIsSaving] = useState(false);
   const { toast } = useToast();
