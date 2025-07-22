@@ -58,13 +58,13 @@ const AdvancedSettingsPanel = ({ settings, setSettings, mockApi }) => {
     }));
   };
 
-  const handleTimeChange = (newTime) => {
+  const handleTimeChange = React.useCallback((newTime) => {
     updateLocalSetting('customInterval', newTime);
     // Also update the individual time components for display
     updateLocalSetting('customHours', Math.floor(newTime / 3600));
     updateLocalSetting('customMinutes', Math.floor((newTime % 3600) / 60));
     updateLocalSetting('customSeconds', newTime % 60);
-  };
+  }, []);
 
   return (
     <div className="space-y-6">
