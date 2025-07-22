@@ -177,7 +177,7 @@ const Dashboard = () => {
             <AdvancedSettingsPanel 
               settings={settings} 
               setSettings={setSettings}
-              mockApi={mockApi}
+              offlineApi={offlineApi}
             />
           </TabsContent>
 
