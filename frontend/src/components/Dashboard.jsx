@@ -39,9 +39,9 @@ const Dashboard = () => {
   const loadData = async () => {
     try {
       const [websitesData, settingsData, statsData] = await Promise.all([
-        mockApi.getWebsites(),
-        mockApi.getSettings(),
-        mockApi.getStats()
+        offlineApi.getWebsites(),
+        offlineApi.getSettings(),
+        offlineApi.getStats()
       ]);
       
       setWebsites(websitesData);
