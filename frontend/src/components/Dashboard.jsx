@@ -56,7 +56,7 @@ const Dashboard = () => {
 
   const handleExtensionToggle = async (isActive) => {
     try {
-      const updatedSettings = await mockApi.updateSettings({ isExtensionActive: isActive });
+      const updatedSettings = await offlineApi.updateSettings({ isExtensionActive: isActive });
       setSettings(updatedSettings);
     } catch (error) {
       console.error('Error updating extension status:', error);
