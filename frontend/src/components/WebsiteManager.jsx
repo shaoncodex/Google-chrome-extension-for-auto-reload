@@ -99,7 +99,7 @@ const WebsiteManager = ({ websites, setWebsites, offlineApi }) => {
     }
 
     try {
-      await mockApi.deleteWebsite(id);
+      await offlineApi.deleteWebsite(id);
       setWebsites(prev => prev.filter(w => w.id !== id));
       
       toast({
