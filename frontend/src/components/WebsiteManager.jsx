@@ -49,7 +49,7 @@ const WebsiteManager = ({ websites, setWebsites, offlineApi }) => {
     setIsAddingWebsite(true);
     
     try {
-      const newWebsite = await mockApi.addWebsite({
+      const newWebsite = await offlineApi.addWebsite({
         url: newWebsiteUrl,
         name: newWebsiteName
       });
